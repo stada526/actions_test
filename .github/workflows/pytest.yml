@@ -5,8 +5,13 @@ on:
     branches:
      - main
 jobs:
-  pytest:
-    name: Run tests with pytest
+  build:
     runs-on: ubuntu-latest
     steps:
-     - uses: 
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: [3.7]
+      - name: test
+        run: pytest
