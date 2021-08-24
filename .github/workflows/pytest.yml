@@ -1,0 +1,12 @@
+name: Sample pytest
+
+on:
+  push:
+    branches:
+     - main
+jobs:
+  pytest:
+    name: Run tests with pytest
+    runs-on: ubuntu-latest
+    steps:
+     - uses: 
